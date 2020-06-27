@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8D10F499-30F9-44B0-8ACE-A47038C9519C}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{8D10F499-30F9-44B0-8ACE-A47038C9519C}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Ambience" ID="{5D3537F5-04BA-4EE4-932A-C35304B00A49}" ShortID="1009301061">
+					<ChildrenList>
+						<Folder Name="Scenery" ID="{E94970C2-F3E9-41D7-B1B3-5AB8878A5E5F}" ShortID="411594606"/>
+						<Folder Name="Playing Space" ID="{874410AE-1673-4CA6-A70A-4266D048AFA9}" ShortID="20675145"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Crowd" ID="{5A3FBEE6-2391-4319-94A7-AAA17F7ECF07}" ShortID="56807479"/>
+				<Folder Name="Fireworks" ID="{6C6F727A-17B6-4956-93FC-AF8E09631C03}" ShortID="697444239"/>
+				<Folder Name="Player Interaction" ID="{0E4D888E-6211-4D4E-B629-25C4A94D7F8F}" ShortID="54429511"/>
+				<Folder Name="Application" ID="{3A3677AA-5E64-4D5F-B4F8-E6F6A3D21569}" ShortID="933878834"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
