@@ -50,7 +50,7 @@ namespace Gameplay
             {
                 this.playerPos.x = playerPos.z - .5f; // move player down -.5 meters per frame
             }
-            if (Input.GetAxis("Horizontal") > 0)
+            if (Input.GetAxis("Vertical") > 0)
             {
                 this.playerPos.x = playerPos.z + .5f; // move player up +.5 meters per frame
             }
