@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E9ED23F1-FB7C-4144-BC87-1DDC981E70F1}" SchemaVersion="97">
+	<InteractiveMusic>
+		<WorkUnit Name="Default Work Unit" ID="{E9ED23F1-FB7C-4144-BC87-1DDC981E70F1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Background" ID="{B9D22503-AEDA-43EA-914D-BE0A8E589ECD}" ShortID="1009309499"/>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>
