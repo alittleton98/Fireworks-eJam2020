@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{125A51ED-71BA-4E77-959D-E7BE01D1D1FA}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{125A51ED-71BA-4E77-959D-E7BE01D1D1FA}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Fireworks" ID="{0C425A2C-8D58-4BDF-9364-A42DFD3F8B9C}" ShortID="540433456">
+					<ChildrenList>
+						<Event Name="Firework_Flight" ID="{253BE8C3-6661-41C1-9995-588E42C9BFAC}"/>
+						<Event Name="Firework_LaunchSequence" ID="{027598B5-5243-4918-8246-5970A3003C90}"/>
+						<Event Name="Firework_Explosion" ID="{C1313F07-3077-46BB-8956-6DAA560CFA19}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Crowd" ID="{7469795C-4BFF-4441-8E59-F1C3CD5E487A}" ShortID="247657844">
+					<ChildrenList>
+						<Event Name="Crowd_Awe" ID="{55C8DDDA-0125-4E92-8E51-CCD3EA293977}"/>
+						<Event Name="Crowd_Eh" ID="{132B0C0F-0E3E-46E6-9251-21A4DA59A0B7}"/>
+						<Event Name="Crowd_Boo" ID="{053767ED-064D-490E-A7FD-32AB84A576AF}"/>
+						<Event Name="Crowd_Cheer" ID="{65433F2B-AFCF-4064-B32D-8420FD3F0AB1}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Application" ID="{7D64A358-14DA-4451-8BAD-B4D038C5A822}" ShortID="119295200"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

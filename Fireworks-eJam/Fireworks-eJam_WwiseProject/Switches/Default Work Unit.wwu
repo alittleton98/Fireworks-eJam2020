@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{23D12862-D511-4122-8BBD-517F9CDC504C}" SchemaVersion="97">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{23D12862-D511-4122-8BBD-517F9CDC504C}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="FireworkExplosionStyle" ID="{F1A77A6C-4D8F-44F7-9B7D-07398B676309}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>
