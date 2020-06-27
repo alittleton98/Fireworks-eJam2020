@@ -38,19 +38,19 @@ namespace Gameplay
         }
         void movePlayer()
         {
-            if (Input.GetAxis("Horizontal") < 0)
+            if (Input.GetKey(KeyCode.A))
             {
                 this.playerPos.x = playerPos.x - .5f; // move player left -.5 meters per frame
             }
-            if (Input.GetAxis("Horizontal") > 0)
+            if (Input.GetKey(KeyCode.D))
             {
                 this.playerPos.x = playerPos.x + .5f; // move player right +.5 meters per frame
             }
-            if (Input.GetAxis("Vertical") < 0)
+            if (Input.GetKey(KeyCode.S))
             {
                 this.playerPos.x = playerPos.z - .5f; // move player down -.5 meters per frame
             }
-            if (Input.GetAxis("Vertical") > 0)
+            if (Input.GetKey(KeyCode.W))
             {
                 this.playerPos.x = playerPos.z + .5f; // move player up +.5 meters per frame
             }
