@@ -32,6 +32,11 @@ namespace ObjectManager
         FireworkStyle style;
         IngredientType type;
 
+        float launchSpeedModifier;
+        string explosionColorModifier;
+        float explosionRadiusModifier;
+        Random rand = new Random();
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -44,6 +49,7 @@ namespace ObjectManager
         {
 
         }
-    }
 
+        
+    }
 }

@@ -12,14 +12,215 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d31300da993974d83a1425edd00576, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
-  ExpandedItems: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 1b09b59e074b8b4b91327cdb0d5ac9ba
+    GuidInternal: 
+    m_lastTime: -8586083297784035815
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 0b1eb292b7d96847bd99a63663d22e32
+    GuidInternal: 
+    m_lastTime: -8586083297784417727
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 2c87075ab43cf944a9e2991b32e35083
+    GuidInternal: 
+    m_lastTime: -8586083265281107326
+    List:
+    - name: Main_LR
+      guid: c7c51616e7470b4c8d2d853d5f4ffe85
+      id: 2393791375
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main_LR
+        ObjectType: 7
+      Path: Default Work Unit\Main_LR
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: ed515a12ba71774e959de7be01d1d1fa
+    GuidInternal: 
+    m_lastTime: -8586083265407106163
+    List:
+    - name: Application
+      guid: 58a3647dda1451448badb4d038c5a822
+      id: 1384118989
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Application
+        ObjectType: 4
+      Path: Default Work Unit\Application
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Crowd
+      guid: 5c796974ff4b41448e59f1c3cd5e487a
+      id: 2848349012
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Crowd
+        ObjectType: 4
+      Path: Default Work Unit\Crowd
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Crowd_Awe
+      guid: daddc8552501924e8e51ccd3ea293977
+      id: 4008287336
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Crowd
+        ObjectType: 4
+      - ElementName: Crowd_Awe
+        ObjectType: 3
+      Path: Default Work Unit\Crowd\Crowd_Awe
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Crowd_Boo
+      guid: ed6737054d060e49a7fd32ab84a576af
+      id: 3606065765
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Crowd
+        ObjectType: 4
+      - ElementName: Crowd_Boo
+        ObjectType: 3
+      Path: Default Work Unit\Crowd\Crowd_Boo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Crowd_Cheer
+      guid: 2b3f4365cfaf6440b32d8420fd3f0ab1
+      id: 432197282
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Crowd
+        ObjectType: 4
+      - ElementName: Crowd_Cheer
+        ObjectType: 3
+      Path: Default Work Unit\Crowd\Crowd_Cheer
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Crowd_Eh
+      guid: 0f0c2b133e0ee646925121a4da59a0b7
+      id: 2177955228
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Crowd
+        ObjectType: 4
+      - ElementName: Crowd_Eh
+        ObjectType: 3
+      Path: Default Work Unit\Crowd\Crowd_Eh
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Firework_Explosion
+      guid: 073f31c17730bb4689566daa560cfa19
+      id: 2211269670
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Fireworks
+        ObjectType: 4
+      - ElementName: Firework_Explosion
+        ObjectType: 3
+      Path: Default Work Unit\Fireworks\Firework_Explosion
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Firework_Flight
+      guid: c3e83b256166c1419995588e42c9bfac
+      id: 2010463259
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Fireworks
+        ObjectType: 4
+      - ElementName: Firework_Flight
+        ObjectType: 3
+      Path: Default Work Unit\Fireworks\Firework_Flight
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Firework_LaunchSequence
+      guid: b59875024352184982465970a3003c90
+      id: 1465633523
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Fireworks
+        ObjectType: 4
+      - ElementName: Firework_LaunchSequence
+        ObjectType: 3
+      Path: Default Work Unit\Fireworks\Firework_LaunchSequence
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Fireworks
+      guid: 2c5a420c588ddf4b9364a42dfd3f8b9c
+      id: 4109189013
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Fireworks
+        ObjectType: 4
+      Path: Default Work Unit\Fireworks
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 6f2a69163ba02c44857828f5e4e661db
+    GuidInternal: 
+    m_lastTime: -8586083297784104505
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: e4635025d00bf14cb324d7f1b271e22b
+    GuidInternal: 
+    m_lastTime: -8586083297784283808
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 6228d12311d522418bbd517f9cdc504c
+    GuidInternal: 
+    m_lastTime: -8586083265936020549
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 519614429f2fca459b3143b01c118be6
+    GuidInternal: 
+    m_lastTime: -8586083297784263974
+    List: []
+  ExpandedItems:
+  - /Fireworks-eJam_WwiseProject
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
