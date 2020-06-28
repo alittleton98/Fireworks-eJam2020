@@ -12,6 +12,7 @@ namespace ObjectManager
         private Rigidbody rb; //only use if objects are given physics requirements
 
         public Vector3 ObjectPos { get => objectPos; set => objectPos = value; }
+        public Rigidbody Rb { get => rb; set => rb = value; }
 
         // Start is called before the first frame update
         public virtual void Awake()

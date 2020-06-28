@@ -1,4 +1,5 @@
 ﻿using ObjectManager;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,19 +7,19 @@ using UnityEngine;
 namespace ObjectManager
 {
 
-    enum FireworkColor
+    public enum FireworkColor
     {
         RED,
         GREEN,
         BLUE,
         GOLD
     }
-    enum FireworkStyle
+    public enum FireworkStyle
     {
         //will include different firework styles
         //idk what styles we want yet though
     }
-    enum IngredientType
+    public enum IngredientType
     {
         HEAD,
         FUEL,
@@ -35,8 +36,12 @@ namespace ObjectManager
         float launchSpeedModifier;
         string explosionColorModifier;
         float explosionRadiusModifier;
-        Random rand = new Random();
-        
+        System.Random random = new System.Random();
+
+        public IngredientType Type { get => type; set => type = value; }
+        public FireworkStyle Style { get => style; set => style = value; }
+        public FireworkColor Color { get => color; set => color = value; }
+
         // Start is called before the first frame update
         void Start()
         {
@@ -50,6 +55,16 @@ namespace ObjectManager
 
         }
 
+        IngredientType ingredientTypeRandomSelector()
+        {
+            IngredientType[] arr = (IngredientType[])Enum.GetValues(typeof(IngredientType));
+            return arr[random.Next(arr.Length)];
+        }
         
+        FireworkColor colorRandomSelector()
+        {
+            FireworkColor[] arr = (FireworkColor[])Enum.GetValues(typeof(FireworkColor));
+            return arr[random.Next(arr.Length)];
+        }
     }
 }

@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GameManager;
+using System;
+using System.Linq;
 
 namespace ObjectManager
 {
@@ -33,11 +35,29 @@ namespace ObjectManager
         {
             for (int i = 0; i < ingredients.Length; i++)
             {
-                if (ingredients[i] == null)
+                if (ingredients[i] == null && !checkForDupIngredientType(ingredient))
                 {
                     ingredients[i] = ingredient;
                 }
             }
+        }
+
+        bool checkForDupIngredientType(FireworkIngredient ingredient)
+        {
+            bool areDupsPresent =  false;
+            foreach (FireworkIngredient i in ingredients)
+            {
+                if (i.Type == ingredient.Type)
+                {
+                    areDupsPresent=  true;
+                }
+                else
+                {
+                    areDupsPresent = false;
+                }
+            }
+
+            return areDupsPresent;
         }
 
         FireworkIngredient[] GetFireworkIngredients()

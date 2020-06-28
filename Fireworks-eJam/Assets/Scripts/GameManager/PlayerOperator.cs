@@ -24,6 +24,7 @@ namespace GameManager
             rb = GetComponent<Rigidbody>();
             //playerName = ; Application management will provide this through platform SDK or simple entry
             playerPos = this.transform.localPosition;
+            objectOperator = GetComponent<ObjectOperator>();
         }
 
         // Update is called once per frame
@@ -61,13 +62,14 @@ namespace GameManager
 
         void grabObject() // may change return type to bool if identifying whether or not player holding something becomes important
         {
-            foreach (FireworkIngredient i in objectOperator.FireworkIngredients)
+            foreach (FireworkIngredient i in (ArrayList)objectOperator.FireworkIngredients)
             {
                 if (Vector3.Distance(i.ObjectPos, playerPos) <= 1.5f)
                 {
                     i.transform.parent = gameObject.transform;
                     holdingObject = true;
                     objectBeingHeld = i;
+                    i.Rb.isKinematic = false;
                 }
 
             }
