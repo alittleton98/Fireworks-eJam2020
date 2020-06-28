@@ -41,14 +41,35 @@ namespace GameManager
         void handlePlayer()
         {
             movePlayer(); // handles player movement
-            grabObject(); // handles player grabbed object 
-
+            if (Input.GetButtonDown("GrabToggle"))
+            {
+                if (!holdingObject)
+                {
+                    grabObject();
+                }else if (holdingObject)
+                {
+                    dropObject(objectBeingHeld);
+                }
+            }
         }
         void movePlayer()
         {
             float h = Input.GetAxisRaw("Horizontal");
             float v = Input.GetAxisRaw("Vertical");
-            Vector3 direction = new Vector3(h, 0f, v).normalized;
+            Vector3 direction = new Vector3(h, 0f, v);
+            transform.rotation = Quaternion.LookRotation(direction); // this turns the character
+            
+            /*
+            Trying to make mouse look around here
+            if (Input.GetAxis("Mouse X") >= 0.1f)
+            {
+
+            }else if(Input.GetAxis("Mouse X") > 0.1f)
+            {
+
+            }
+            */
+
 
             if (direction.magnitude >= 0.1f)
             {
@@ -60,21 +81,24 @@ namespace GameManager
         {
             foreach (GameObject i in objectOperator.FireworkIngredients)
             {
-                if (Vector3.Distance(i.transform.position, playerPos) <= 1.5f)
+                //Debug.Log(Vector3.Distance(i.transform.position, gameObject.transform.position));
+                if (!holdingObject)
                 {
-                    i.GetComponent<Rigidbody>().isKinematic = false;
-                    i.transform.parent = this.transform;
-                    holdingObject = true;
-                    objectBeingHeld = i;
-                    objectBeingHeld = i;
-                    Debug.Log("Holding Object");
+                    if (Vector3.Distance(i.transform.position, gameObject.transform.position) <= 1.5f)
+                    {
+                        i.GetComponent<Rigidbody>().useGravity = false;
+                        i.transform.parent = gameObject.transform;
+                        holdingObject = true;
+                        objectBeingHeld = i;
+                    }
                 }
 
             }
         }
 
-        void dropObject()
+        void dropObject(GameObject obj)
         {
+            obj.GetComponent<Rigidbody>().useGravity = true;
             objectBeingHeld.transform.parent = null;
             objectBeingHeld = null;
             holdingObject = false;

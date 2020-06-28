@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Camera
   - FireworkIngredient
+  - AudienceMember
   layers:
   - Default
   - TransparentFX

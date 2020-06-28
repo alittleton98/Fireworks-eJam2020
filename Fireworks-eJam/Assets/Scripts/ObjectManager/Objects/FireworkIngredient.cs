@@ -25,7 +25,8 @@ namespace ObjectManager
         EFFECT,
         TAIL
     }
-    
+
+    [RequireComponent(typeof(Rigidbody))]
     public class FireworkIngredient : GrabbableObject
     {
         FireworkColor color;
