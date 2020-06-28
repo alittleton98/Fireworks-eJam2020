@@ -29,13 +29,19 @@ namespace ObjectManager
 
         }
 
-        void addIngredient(FireworkIngredient ingredient)
+        public Firework()
+        {
+
+        }
+
+        public void addIngredient(FireworkIngredient ingredient)
         {
             for (int i = 0; i < ingredients.Length; i++)
             {
                 if (ingredients[i] == null)
                 {
                     ingredients[i] = ingredient;
+                    
                 }
             }
         }

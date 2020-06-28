@@ -18,7 +18,7 @@ namespace ObjectManager
         //will include different firework styles
         //idk what styles we want yet though
     }
-    enum IngredientType
+    public enum IngredientType
     {
         HEAD,
         FUEL,
@@ -37,7 +37,9 @@ namespace ObjectManager
         string explosionColorModifier;
         float explosionRadiusModifier;
         Random rand = new Random();
-        
+
+        public IngredientType Type { get => type; set => type = value; }
+
         // Start is called before the first frame update
         void Start()
         {

@@ -31,6 +31,7 @@ public class BuildTable : MonoBehaviour
         {
             print("Trigger Entered!");
             //Destroy(other.gameObject);
+            
         }
     }
 }
