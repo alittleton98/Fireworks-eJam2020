@@ -15,8 +15,11 @@ namespace GameManager
         private GameObject grabbedObject;
         ObjectOperator objectOperator;
         bool holdingObject = false;
-        FireworkIngredient objectBeingHeld;
+        GameObject objectBeingHeld;
 
+        public CharacterController controller;
+
+        public float speed = 6f;
 
         // Start is called before the first frame update
         void Start()
@@ -24,6 +27,9 @@ namespace GameManager
             rb = GetComponent<Rigidbody>();
             //playerName = ; Application management will provide this through platform SDK or simple entry
             playerPos = this.transform.localPosition;
+            objectOperator = GetComponent<ObjectOperator>();
+            Debug.Log(" type == " + objectOperator.GetType().Name);
+
         }
 
         // Update is called once per frame
@@ -40,34 +46,28 @@ namespace GameManager
         }
         void movePlayer()
         {
-            if (Input.GetAxis("Horizontal") < 0)
-            {
-                this.playerPos.x = playerPos.x - .5f; // move player left -.5 meters per frame
+            float h = Input.GetAxisRaw("Horizontal");
+            float v = Input.GetAxisRaw("Vertical");
+            Vector3 direction = new Vector3(h, 0f, v).normalized;
 
-            }
-            if (Input.GetAxis("Horizontal") > 0)
+            if (direction.magnitude >= 0.1f)
             {
-                this.playerPos.x = playerPos.x + .5f; // move player right +.5 meters per frame
-            }
-            if (Input.GetAxis("Vertical") < 0)
-            {
-                this.playerPos.x = playerPos.z - .5f; // move player down -.5 meters per frame
-            }
-            if (Input.GetAxis("Horizontal") > 0)
-            {
-                this.playerPos.x = playerPos.z + .5f; // move player up +.5 meters per frame
+                controller.Move(direction * speed * Time.deltaTime);
             }
         }
 
         void grabObject() // may change return type to bool if identifying whether or not player holding something becomes important
         {
-            foreach (FireworkIngredient i in objectOperator.FireworkIngredients)
+            foreach (GameObject i in objectOperator.FireworkIngredients)
             {
-                if (Vector3.Distance(i.ObjectPos, playerPos) <= 1.5f)
+                if (Vector3.Distance(i.transform.position, playerPos) <= 1.5f)
                 {
-                    i.transform.parent = gameObject.transform;
+                    i.GetComponent<Rigidbody>().isKinematic = false;
+                    i.transform.parent = this.transform;
                     holdingObject = true;
                     objectBeingHeld = i;
+                    objectBeingHeld = i;
+                    Debug.Log("Holding Object");
                 }
 
             }

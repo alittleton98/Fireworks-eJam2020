@@ -20,13 +20,14 @@ namespace ObjectManager
         void Start()
         {
             gatherObjects(); //collects all objects in space at once
+            Debug.Log(FireworkIngredients.Count);
         }
 
         // Update is called once per frame
         //method left empty if needed, but functions called every frame likely won't be called here and only called as necessary
         void Update()
         {
-            
+
         }
         //following methods collect all corresponding objects (segmented by type)
         void gatherObjects()
@@ -48,7 +49,7 @@ namespace ObjectManager
         void handleFireworkIngredients()
         {
             //takes array of all firework ingredients present at first frame and loads them into corresponding ArrayList
-            GameObject[] objArr = GameObject.FindGameObjectsWithTag("FireworkIngredients"); 
+            GameObject[] objArr = GameObject.FindGameObjectsWithTag("FireworkIngredient"); 
             foreach(GameObject i in objArr)
             {
                 if (!FireworkIngredients.Contains(i))
