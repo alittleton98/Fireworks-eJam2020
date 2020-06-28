@@ -57,7 +57,12 @@ namespace GameManager
             float h = Input.GetAxisRaw("Horizontal");
             float v = Input.GetAxisRaw("Vertical");
             Vector3 direction = new Vector3(h, 0f, v);
-            transform.rotation = Quaternion.LookRotation(direction); // this turns the character
+
+            if ( h != 0 || v != 0 )
+            {
+                transform.rotation = Quaternion.LookRotation(direction); // this turns the character
+            }
+
             
             /*
             Trying to make mouse look around here
@@ -87,7 +92,10 @@ namespace GameManager
                     if (Vector3.Distance(i.transform.position, gameObject.transform.position) <= 1.5f)
                     {
                         i.GetComponent<Rigidbody>().useGravity = false;
+                        i.GetComponent<Rigidbody>().isKinematic = true;
                         i.transform.parent = gameObject.transform;
+                        i.transform.localPosition = new Vector3(0, 0.7f, 1);
+
                         holdingObject = true;
                         objectBeingHeld = i;
                     }
@@ -99,6 +107,7 @@ namespace GameManager
         void dropObject(GameObject obj)
         {
             obj.GetComponent<Rigidbody>().useGravity = true;
+            obj.GetComponent<Rigidbody>().isKinematic = false;
             objectBeingHeld.transform.parent = null;
             objectBeingHeld = null;
             holdingObject = false;

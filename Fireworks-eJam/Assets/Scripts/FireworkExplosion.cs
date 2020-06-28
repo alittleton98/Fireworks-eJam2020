@@ -19,7 +19,8 @@ public class FireworkExplosion : MonoBehaviour
 
     public float blastVelocity = 5;
 
-    void Start()
+
+    public void Explode()
     {
 
         effect = GetComponent<VisualEffect>();
@@ -54,6 +55,7 @@ public class FireworkExplosion : MonoBehaviour
 
         effect.SetFloat("BlastVelocity", blastVelocity);
 
+        effect.Play();
 
 
     }
@@ -61,6 +63,6 @@ public class FireworkExplosion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
