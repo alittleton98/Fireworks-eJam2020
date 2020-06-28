@@ -15,6 +15,10 @@ public class AudienceMember : MonoBehaviour
 
     public Texture tex;
 
+    public AnimationCurve curve;
+
+    public Color TimerColor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +43,7 @@ public class AudienceMember : MonoBehaviour
         //iconMatrix[2, 2] *= 0.1f;
         //iconMatrix[3, 3] *= 0.1f;
         // blue mesh
-        block.SetColor(colorID, Color.red);
+        block.SetColor(colorID, TimerColor);
         block.SetFloat(progressID, Mathf.Abs(Mathf.Sin(Time.time)));
 
 
@@ -55,7 +59,7 @@ public class AudienceMember : MonoBehaviour
         Vector3 forward = gameObject.transform.up * 0.01f;
 
         iconMatrix[0, 3] += forward.x;
-        iconMatrix[1, 3] += forward.y;
+        iconMatrix[1, 3] += forward.y + 1* curve.Evaluate(Time.time);
         iconMatrix[2, 3] += forward.z;
 
         iconBlock.SetTexture(iconID, tex);

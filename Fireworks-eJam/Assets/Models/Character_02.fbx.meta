@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: e76193e23b77cde4bad24b9fad9d6fee
+guid: 7d0f96eb4f02805459f889285dc279ce
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Expression
+    second: {fileID: 2100000, guid: 60391a9ed1ba88f40b2a8cc100d2ceb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt
+    second: {fileID: 2100000, guid: 50fa2270b79f7084893032d7675d2f1e, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
