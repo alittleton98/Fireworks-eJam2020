@@ -58,21 +58,13 @@ namespace GameManager
             float v = Input.GetAxisRaw("Vertical");
             Vector3 direction = new Vector3(h, 0f, v);
 
-<<<<<<< HEAD
             if ( h != 0 || v != 0 )
             {
                 transform.rotation = Quaternion.LookRotation(direction); // this turns the character
             }
 
             
-=======
-            if (h != 0 || v != 0)
-            {
-                transform.rotation = Quaternion.LookRotation(direction); // this turns the character
 
-            }
-
->>>>>>> kajetan
             /*
             Trying to make mouse look around here
             if (Input.GetAxis("Mouse X") >= 0.1f)
@@ -100,20 +92,18 @@ namespace GameManager
                 {
                     if (Vector3.Distance(i.transform.position, gameObject.transform.position) <= 1.5f)
                     {
-<<<<<<< HEAD
-                        i.GetComponent<Rigidbody>().useGravity = false;
-                        i.GetComponent<Rigidbody>().isKinematic = true;
-                        i.transform.parent = gameObject.transform;
-                        i.transform.localPosition = new Vector3(0, 0.7f, 1);
 
-=======
+                        if ( i.GetComponent<Box>() )
+                        {
+                            print("Box!");
+                        }
+
                         print("grabbed object");
                         i.GetComponent<Rigidbody>().useGravity = false;
                         i.GetComponent<Rigidbody>().isKinematic = true;
                         i.transform.parent = gameObject.transform;
 
-                        i.transform.localPosition = new Vector3(0, 0, 1 );
->>>>>>> kajetan
+                        i.transform.localPosition = new Vector3(0, 0.5f, 0.5f );
                         holdingObject = true;
                         objectBeingHeld = i;
                     }
@@ -124,10 +114,7 @@ namespace GameManager
 
         void dropObject(GameObject obj)
         {
-<<<<<<< HEAD
-=======
-            print("dropped object");
->>>>>>> kajetan
+
             obj.GetComponent<Rigidbody>().useGravity = true;
             obj.GetComponent<Rigidbody>().isKinematic = false;
             objectBeingHeld.transform.parent = null;

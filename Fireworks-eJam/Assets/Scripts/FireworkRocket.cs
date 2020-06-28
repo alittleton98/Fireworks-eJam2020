@@ -21,11 +21,10 @@ public class FireworkRocket : MonoBehaviour
     public float rocketSpeed = 2f;
     void Start()
     {
-<<<<<<< HEAD
+
         startTime = Time.time;
-=======
-        startTime = Time.time;    
->>>>>>> kajetan
+
+
     }
 
     // Update is called once per frame
@@ -33,15 +32,10 @@ public class FireworkRocket : MonoBehaviour
     {
 
         float offset = rocketSpeed * Time.deltaTime;
-<<<<<<< HEAD
         gameObject.transform.position += new Vector3(0, offset, 0);
 
         if (Time.time - startTime >= fuseTime)
-=======
-        gameObject.transform.position += new Vector3(0, offset, 0 );
 
-        if ( Time.time - startTime >= fuseTime )
->>>>>>> kajetan
         {
 
             GameObject newExplosion = Instantiate(Explosion);
@@ -56,8 +50,5 @@ public class FireworkRocket : MonoBehaviour
             Destroy(gameObject);
         }
     }
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> kajetan
