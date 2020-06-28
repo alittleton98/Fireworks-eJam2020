@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GameManager;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ namespace ObjectManager
 {
     public class GrabbableObject : MonoBehaviour
     {
+        ObjectOperator objectOperator;
+        GameOperator gameOperator;
         private string tag;
         private Vector3 objectPos;
         private Player objectHolder;
@@ -21,6 +24,11 @@ namespace ObjectManager
             rb = GetComponent<Rigidbody>();
         }
 
+        public virtual void OnCollisionEnter(Collision collision)
+        {
+            Debug.Log("collided");
+            
+        }
     }
 }
 

@@ -36,7 +36,19 @@ namespace GameManager
         void handlePlayer()
         {
             movePlayer(); // handles player movement
-            grabObject(); // handles player grabbed object 
+
+            if (Input.GetButtonDown("GrabToggle")) // handles player grabbed object 
+            {
+                if (!holdingObject)
+                {
+                    grabObject(); //grabs object if player is not holding 
+                }
+                else if (holdingObject)
+                {
+                    dropObject();
+                }
+            }
+            grabObject(); 
 
         }
         void movePlayer()

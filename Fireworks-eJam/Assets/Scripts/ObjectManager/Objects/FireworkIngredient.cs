@@ -66,5 +66,10 @@ namespace ObjectManager
             FireworkColor[] arr = (FireworkColor[])Enum.GetValues(typeof(FireworkColor));
             return arr[random.Next(arr.Length)];
         }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            
+        }
     }
 }

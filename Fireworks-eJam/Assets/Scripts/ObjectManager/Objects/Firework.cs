@@ -10,7 +10,7 @@ namespace ObjectManager
 {
     public class Firework : MonoBehaviour
     {
-        FireworkIngredient[] ingredients = new FireworkIngredient[4];
+        
         FireworkRecipe recipe;
         bool isCompleted = false;
         float explosionRadius = 10f;
@@ -31,40 +31,13 @@ namespace ObjectManager
 
         }
 
-        void addIngredient(FireworkIngredient ingredient)
-        {
-            for (int i = 0; i < ingredients.Length; i++)
-            {
-                if (ingredients[i] == null && !checkForDupIngredientType(ingredient))
-                {
-                    ingredients[i] = ingredient;
-                }
-            }
-        }
-
-        bool checkForDupIngredientType(FireworkIngredient ingredient)
-        {
-            bool areDupsPresent =  false;
-            foreach (FireworkIngredient i in ingredients)
-            {
-                if (i.Type == ingredient.Type)
-                {
-                    areDupsPresent=  true;
-                }
-                else
-                {
-                    areDupsPresent = false;
-                }
-            }
-
-            return areDupsPresent;
-        }
-
+        
+        /*
         FireworkIngredient[] GetFireworkIngredients()
         {
             return ingredients;
         }
-
+        */
         void incrementCompletionRating()
         {
             completionRating++;

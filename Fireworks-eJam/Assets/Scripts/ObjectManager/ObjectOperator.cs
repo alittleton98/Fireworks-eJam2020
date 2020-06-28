@@ -73,6 +73,18 @@ namespace ObjectManager
                 FireworkIngredients.Remove(gameObj);
             }
         }
+
+        public bool atGoal(string name)
+        {
+            if (name == "Goal")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         
     }
 
